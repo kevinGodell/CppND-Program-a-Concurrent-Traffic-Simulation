@@ -85,11 +85,11 @@ void TrafficLight::cycleThroughPhases()
     // Also, the while-loop should use std::this_thread::sleep_for to wait 1ms between two cycles.
 
     // http://www.cplusplus.com/reference/random/uniform_int_distribution/
-    std::random_device randomDevice; // obtain a random number from hardware
-    std::mt19937 mt19937(randomDevice()); // seed the generator
-    std::uniform_int_distribution<> uniformIntDistribution(4000, 6000); // define the range
+    std::random_device rd; // obtain a random number from hardware
+    std::mt19937 gen(rd()); // seed the generator
+    std::uniform_int_distribution<> uid(4000, 6000); // define the range
 
-    double cycleDuration = uniformIntDistribution(mt19937); // duration of a single simulation cycle in ms
+    double cycleDuration = uid(gen); // duration of a single simulation cycle in ms
 
     std::chrono::time_point<std::chrono::system_clock> lastUpdate;
 
