@@ -1,6 +1,7 @@
 #include <iostream>
 #include <random>
 #include <future>
+#include <chrono>
 #include "TrafficLight.h"
 
 /* Implementation of class "MessageQueue" */
