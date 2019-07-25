@@ -47,7 +47,7 @@ public:
 
     // typical behaviour methods
     void waitForGreen();
-    void simulate();
+    void simulate() override;
 
 private:
     // typical behaviour methods
